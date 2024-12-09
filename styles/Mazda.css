@@ -1,0 +1,171 @@
+@font-face {
+  font-family:Anton SC;
+  src: url(./Font/AntonSC-Regular.ttf);
+}
+
+@font-face {
+  font-family:Streetar;
+  src: url(./Font/StreetartDemoRegular.ttf);
+}
+
+/* Reset */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que o tamanho total de um elemento inclua bordas e preenchimento */
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif; /* Define a fonte Arial para o corpo da página */
+  background-color: #0b0c10; /* Cor de fundo escura (quase preta) */
+  color: #f0f0f0; /* Cor do texto clara para contraste */
+  line-height: 1.6; /* Aumenta a altura das linhas para melhorar a legibilidade */
+  animation: fadeIn 1s ease-in-out; /* Animação de fade para o corpo da página (aparece suavemente) */
+}
+
+/* Header */
+header {
+  background: url("../img/🤔°○\ Honda\ NSX.jpg") center/cover no-repeat; /* Define a imagem de fundo do cabeçalho, centralizada e coberta */
+  height: 57vh; /* A altura do cabeçalho ocupa 57% da altura da tela */
+  display: flex; /* Usando Flexbox para alinhamento */
+  justify-content: center; /* Alinha os itens no centro horizontalmente */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  text-align: center; /* Alinha o texto no centro */
+  color: white; /* Cor do texto do cabeçalho em branco */
+  width: auto; /* Largura do cabeçalho se ajusta automaticamente */
+  opacity: 0; /* Cabeçalho começa invisível */
+  animation: fadeIn 2s ease-in-out forwards; /* Animação de fade para tornar o cabeçalho visível */
+}
+
+/* Título e Parágrafo do Cabeçalho */
+header .header-content h1 {
+    font-family:Streetar;
+  font-size: 80px; /* Tamanho do título */
+  font-weight: bold; /* Deixa o título em negrito */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra no texto para destaque */
+  animation: slideUp 1s ease-out; /* Animação de deslizar para cima do título */
+}
+
+header .header-content p {
+  font-size: 1.4rem; /* Tamanho do parágrafo */
+  margin-top: 8px; /* Espaço acima do parágrafo */
+  font-style: italic; /* Deixa o parágrafo em itálico */
+  animation: slideUp 1.5s ease-out; /* Animação de deslizar para cima do parágrafo */
+  animation-delay: 0.5s; /* Atraso na animação do parágrafo */
+}
+
+/* Seções */
+section {
+  padding: 30px; /* Adiciona preenchimento interno nas seções */
+  margin-top: 15px; /* Adiciona espaço acima de cada seção */
+  opacity: 0; /* As seções começam invisíveis */
+  animation: fadeInUp 1s ease-in-out forwards; /* Animação de fade e movimento para cima para as seções */
+}
+
+/* Introdução (Intro) */
+.intro h2 {
+  font-size: 2.4rem; /* Tamanho do título da seção de introdução */
+  margin-bottom: 12px; /* Espaço abaixo do título */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  color: #e6cf00; /* Cor amarela para o título */
+}
+
+.intro p {
+  font-size: 1.1rem; /* Tamanho do parágrafo da introdução */
+}
+
+/* Desempenho (Performance) */
+.performance ul {
+  list-style-type: none; /* Remove os marcadores das listas */
+  font-size: 1rem; /* Tamanho da fonte dos itens de lista */
+}
+
+.performance li {
+  margin: 8px 0; /* Espaço entre os itens da lista */
+}
+
+.performance strong {
+  color: #e6cf00; /* Destaque em amarelo para as palavras em negrito */
+}
+
+/* Design */
+.design h2 {
+  font-size: 2.4rem; /* Tamanho do título da seção de design */
+  margin-bottom: 12px; /* Espaço abaixo do título */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  color: #e6cf00; /* Cor amarela para o título */
+}
+
+.design p {
+  font-size: 1.1rem; /* Tamanho do parágrafo na seção de design */
+  margin-bottom: 12px; /* Espaço abaixo do parágrafo */
+}
+
+.design video {
+  width: 100%; /* O vídeo ocupa 100% da largura do contêiner */
+  max-width: 750px; /* O vídeo tem um limite de largura de 750px */
+  border-radius: 12px; /* Bordas arredondadas no vídeo */
+  margin-top: 18px; /* Espaço acima do vídeo */
+  opacity: 0; /* O vídeo começa invisível */
+  animation: fadeIn 2s ease-in-out forwards; /* Animação de fade para tornar o vídeo visível */
+}
+
+/* História (History) */
+.history h2 {
+  font-size: 2.4rem; /* Tamanho do título da seção de história */
+  color: #e6cf00; /* Cor amarela para o título */
+}
+
+/* Botão de Voltar (Back Button) */
+.button-container {
+  text-align: center; /* Centraliza o botão */
+  margin-top: 30px; /* Espaço acima do botão */
+}
+
+.back-button {
+  text-decoration: none; /* Remove o sublinhado do link */
+  background-color: #e6cf00; /* Cor de fundo amarela para o botão */
+  color: white; /* Cor do texto do botão em branco */
+  padding: 12px 20px; /* Preenchimento interno do botão */
+  border-radius: 8px; /* Bordas arredondadas no botão */
+  font-size: 1rem; /* Tamanho da fonte do botão */
+  transition: background-color 0.3s, transform 0.3s; /* Efeito de transição no hover para cor e transformação */
+}
+
+.back-button:hover {
+  background-color: #b8a800; /* Cor de fundo mais escura quando o mouse está sobre o botão */
+  transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+/* Animações */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    opacity: 1; /* Fica totalmente visível */
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(30px); /* Começa com um deslocamento para baixo */
+  }
+  100% {
+    opacity: 1; /* Fica totalmente visível */
+    transform: translateY(0); /* Move para a posição original */
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px); /* Começa com um deslocamento para baixo */
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    transform: translateY(0); /* Move para a posição original */
+    opacity: 1; /* Fica totalmente visível */
+  }
+}

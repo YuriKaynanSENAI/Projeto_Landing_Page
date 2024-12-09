@@ -1,0 +1,275 @@
+@font-face {
+  font-family:Anton SC;
+  src: url(./Font/AntonSC-Regular.ttf);
+}
+
+@font-face {
+  font-family:Streetar;
+  src: url(./Font/StreetartDemoRegular.ttf);
+}
+
+/* Reset */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+  background: #0d0d0d; /* Define um fundo escuro para o corpo */
+  color: #fff; /* Define a cor do texto como branco */
+  line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade */
+}
+
+
+
+/* Rolagem suave */
+html {
+  scroll-behavior: smooth; /* Habilita uma rolagem suave quando navegando pelo conteúdo da página */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    opacity: 1; /* Fica completamente visível */
+  }
+}
+
+/* Animação de slide-in para o cabeçalho */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); /* O cabeçalho começa fora da tela, acima */
+  }
+  100% {
+    transform: translateY(
+      0
+    ); /* O cabeçalho se move para sua posição original */
+  }
+}
+
+/* Estilo do botão */
+.btn {
+  font-family:Anton SC;
+  background-color: #ff0054; /* Cor de fundo rosa para o botão */
+  color: white; /* Cor do texto branca */
+  display: inline-block; /* O botão se comporta como um bloco em linha */
+  padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+  text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+  font-size: 1.2rem; /* Tamanho da fonte maior */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves para mudanças de cor e transformação */
+}
+
+.btn:hover {
+  background-color: #39e83c; /* Cor de fundo muda quando o mouse passa por cima */
+  transform: translateY(
+    -5px
+  ); /* O botão "sobe" quando o mouse passa por cima */
+}
+
+/* Estilo do cabeçalho */
+header {
+  height: 100vh; /* O cabeçalho ocupa 100% da altura da janela */
+  background: url("../img/Take\ a\ Look\ at\ AO\ Racing's\ Porsche\ 911\ _GT3-Rawr_.jpg")
+    center/cover no-repeat; /* Define uma imagem de fundo centralizada e cobrir a área */
+  display: flex; /* Usa flexbox para organizar os itens dentro do cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  justify-content: center; /* Alinha os itens horizontalmente no centro */
+  text-align: center; /* Alinha o texto no centro */
+  position: relative; /* Permite a sobreposição de elementos no cabeçalho */
+  animation: slideIn 1.5s ease-out; /* Animação de entrada suave para o cabeçalho */
+}
+
+/* Camada escura sobre o conteúdo do cabeçalho */
+header .Inicio {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Fundo semi-transparente para escurecer o conteúdo */
+  position: absolute; /* Posiciona a camada acima do conteúdo */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Preenche todo o cabeçalho */
+  animation: fadeIn 2s ease-out; /* Animação de fade-in para o conteúdo */
+}
+
+/* Estilo do título no cabeçalho */
+header h1 {
+  font-family:Streetar;
+  font-size: 87px; /* Tamanho grande para o título */
+  text-shadow: 2px 2px #299b2a; /* Adiciona uma sombra no texto para dar destaque */
+}
+
+
+/* Estilo do parágrafo no cabeçalho */
+header p {
+  font-size: 1.5rem; /* Tamanho da fonte maior */
+  margin-top: 10px; /* Espaço acima do parágrafo */
+}
+
+/* Estilo do botão no cabeçalho */
+header .btn {
+  font-family:Anton SC;
+  margin-top: 20px; /* Adiciona espaço acima do botão */
+  padding: 10px 20px; /* Adiciona preenchimento ao botão */
+  background: #144c15; /* Cor de fundo rosa */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  border-radius: 10px; /* Bordas mais arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto branca */
+  text-decoration: none; /* Remove sublinhado */
+  opacity: 0; /* Começa invisível */
+  animation: fadeIn 2s 1s forwards; /* Animação de fade-in após 1 segundo */
+}
+
+/* Estilo da seção de destaques */
+.Destaques {
+  padding: 50px; /* Espaçamento interno */
+  background: #161616; /* Cor de fundo escura */
+  text-align: center; /* Alinha o texto no centro */
+  animation: fadeIn 2s 0.5s forwards; /* Animação de fade-in para a seção de destaques */
+}
+
+/* Estilo dos destaques (estatísticas) */
+.Destaques .stats {
+  display: flex; /* Usa flexbox para organizar as estatísticas */
+  justify-content: center; /* Alinha os itens horizontalmente no centro */
+  gap: 20px; /* Espaço entre os itens */
+}
+
+.stat {
+  font-size: 1.5rem; /* Tamanho da fonte */
+  color: #ff0054; /* Cor do texto rosa */
+}
+
+/* Estilo da seção de modelos */
+.models {
+  padding: 50px; /* Espaçamento interno */
+  animation: fadeIn 2s 1s forwards; /* Animação de fade-in para a seção de modelos */
+}
+
+.cards {
+  display: flex; /* Flexbox para organizar os cards */
+  gap: 20px; /* Espaço entre os cards */
+  justify-content: center; /* Alinha os cards no centro */
+}
+
+.card {
+  background: #202020; /* Cor de fundo escura para os cards */
+  padding: 20px; /* Preenchimento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Alinha o texto no centro */
+  width: 300px; /* Largura fixa para os cards */
+  opacity: 0; /* Começa invisível */
+  animation: fadeIn 2s forwards; /* Animação de fade-in para os cards */
+}
+
+/* Estilo das imagens dentro dos cards */
+.card img {
+  width: 100%; /* A imagem ocupa 100% da largura do card */
+  border-radius: 5px; /* Bordas arredondadas nas imagens */
+}
+
+/* Estilo da seção de galeria */
+.Galeria {
+  padding: 50px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto no centro */
+  animation: fadeIn 2s 1.5s forwards; /* Animação de fade-in para a galeria */
+}
+
+/* Estilo dos vídeos na galeria */
+.Galeria video {
+  width: 80%; /* Largura do vídeo */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo da seção de feedbacks/testemunhos */
+.Feedbacks {
+  padding: 50px; /* Espaçamento interno */
+  background: #161616; /* Cor de fundo escura */
+  animation: fadeIn 2s 2s forwards; /* Animação de fade-in para os feedbacks */
+}
+
+.Feedback {
+  margin-bottom: 20px; /* Espaço abaixo de cada feedback */
+  font-style: italic; /* Deixa o texto em itálico */
+}
+
+/* Estilo da seção de contato */
+.Contato {
+  padding: 50px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto no centro */
+  animation: fadeIn 2s 2.5s forwards; /* Animação de fade-in para o formulário de contato */
+}
+
+/* Estilo dos campos de entrada e textarea no formulário de contato */
+.Contato input,
+.Contato textarea {
+  width: 100%; /* Largura total */
+  margin: 10px 0; /* Margem entre os campos */
+  padding: 10px; /* Preenchimento interno */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo do botão no formulário de contato */
+.Contato .btn {
+  margin-top: 10px; /* Espaço acima do botão */
+  background: #144c15; /* Cor de fundo rosa */
+  padding: 10px 20px; /* Preenchimento interno */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto branca */
+}
+
+/* Estilo do rodapé */
+footer {
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto no centro */
+  background: #0d0d0d; /* Cor de fundo escura */
+  animation: fadeIn 2s 3s forwards; /* Animação de fade-in para o rodapé */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 80px; /* Diminui o tamanho do título em telas pequenas */
+  }
+
+  header p {
+    font-size: 1.2rem; /* Diminui o tamanho do parágrafo em telas pequenas */
+  }
+
+  header .btn {
+    padding: 8px 16px; /* Diminui o padding do botão em telas pequenas */
+  }
+
+  .Destaques {
+    padding: 30px; /* Diminui o padding da seção de destaques */
+  }
+
+  .models .cards {
+    flex-direction: column; /* Muda a direção dos cards para coluna */
+  }
+
+  .model {
+    font-size: 1rem; /* Diminui o tamanho da fonte dos modelos */
+  }
+
+  .Galeria video {
+    width: 100%; /* Faz o vídeo ocupar 100% da largura da tela */
+  }
+
+  .Contato input,
+  .Contato textarea {
+    font-size: 1rem; /* Ajusta o tamanho da fonte no formulário */
+  }
+
+}

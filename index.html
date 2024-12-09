@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Definição da codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Definição da visualização para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página exibido na aba do navegador -->
+    <title>JDM Car Shop</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Link para fontes externas do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Graffiti&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho da página, com introdução e botão de navegação -->
+    <header>
+      <div class="Inicio">
+        <!-- Título principal do site -->
+        <h1>JDM Car Shop</h1>
+        <!-- Subtítulo explicativo -->
+        <p>Sua porta de entrada para os carros japoneses lendários.</p>
+        <!-- Link para seção de modelos -->
+        <a href="#models" class="btn">Ver Modelos</a>
+      </div>
+    </header>
+
+    <!-- Seção de Destaques com informações rápidas -->
+    <section class="Destaques">
+      <h2>Por que escolher JDM?</h2>
+      <div class="stats">
+        <!-- Informações de destaque sobre os carros JDM -->
+        <div class="stat">🔥 Performance de mais de 500 HP</div>
+        <div class="stat">🚗 Designs Únicos</div>
+        <div class="stat">🔧 Potencial de Tunagem Infinito</div>
+      </div>
+    </section>
+
+    <!-- Seção de Modelos, com cartões para cada carro JDM -->
+    <section id="models" class="models">
+      <!-- Título da seção com estilo centralizado -->
+      <h2 style="display: flex; align-items: normal">
+        Nossos Carros JDM Lendários
+      </h2>
+      <div class="cards">
+        <!-- Cartão do Nissan Skyline -->
+        <div class="card">
+          <img
+            src="img/a iconic powerhouse that defies convention and redefines the drive. With its sleek design, advanced technology, and legendary performance, this Japanese muscle car is built for the bold and the fe.png"
+            alt="Nissan Skyline GTR"
+          />
+          <!-- Nome do carro -->
+          <h3>Nissan Skyline GTR</h3>
+          <!-- Descrição breve sobre o carro -->
+          <p>O rei do JDM, conhecido por sua performance e design icônico.</p>
+          <!-- Link para mais informações sobre o carro -->
+          <a href="Nissan.html" class="btn" id="btnS">Ver mais</a>
+        </div>
+        <!-- Cartão do Toyota Supra -->
+        <div class="card">
+          <img
+            src="img/The Toyota Supra MK4, also known as the A80, is an iconic sports car that has left a lasting legacy in the automotive world. Produced from 1993 to 2002, the MK4 Supra is celebrated for its sleek d.png"
+            alt="Toyota Supra MK4"
+          />
+          <!-- Nome do carro -->
+          <h3>Toyota Supra MK4</h3>
+          <!-- Descrição breve sobre o carro -->
+          <p>
+            Uma obra-prima atemporal com um potencial de tunagem incomparável.
+          </p>
+          <!-- Link para mais informações sobre o carro -->
+          <a href="Supra.html" class="btn" id="btnT">Ver mais</a>
+        </div>
+        <!-- Cartão do Mazda RX-7 -->
+        <div class="card">
+          <img
+            src="img/Mazda- RX7 The Mazda RX-7 is a legendary sports car known for its distinctive rotary engine and sleek, lightweight design. Produced between 1978 and 2002, the RX-7 became famous for its high-revvi.png"
+            alt="Mazda RX-7"
+          />
+          <!-- Nome do carro -->
+          <h3>Mazda RX-7</h3>
+          <!-- Descrição breve sobre o carro -->
+          <p>
+            Lenda com motor rotativo, design elegante e desempenho incrível.
+          </p>
+          <!-- Link para mais informações sobre o carro -->
+          <a href="Mazda.html" class="btn" id="btnM">Ver mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Galeria com vídeo -->
+    <section class="Galeria">
+      <h2>Experimente a Ação JDM</h2>
+      <!-- Vídeo que exibe ação JDM -->
+      <video autoplay muted loop>
+        <source src="img/videoplayback.mp4" type="video/mp4" />
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </section>
+
+    <!-- Seção de Testemunhos de clientes -->
+    <section class="Feedbacks">
+      <h2>O que nossos clientes dizem</h2>
+      <!-- Testemunho de um cliente -->
+      <div class="Feedback">
+        <p>"Comprar meu Skyline GTR aqui foi a melhor decisão que tomei!"</p>
+        <cite>- John Doe</cite>
+      </div>
+      <!-- Testemunho de outro cliente -->
+      <div class="Feedback">
+        <p>"O Supra que comprei aqui é uma fera! Altamente recomendado."</p>
+        <cite>- Jane Smith</cite>
+      </div>
+    </section>
+
+    <!-- Seção de Contato com formulário -->
+    <section class="Contato">
+      <h2>Entre em Contato Conosco</h2>
+      <!-- Formulário para o usuário preencher -->
+      <form>
+        <input type="text" placeholder="Seu Nome" required />
+        <input type="email" placeholder="Seu E-mail" required />
+        <textarea placeholder="Sua Mensagem"></textarea>
+        <!-- Botão para enviar o formulário -->
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Rodapé da página com informações de copyright -->
+    <footer>
+      <p>&copy; 2024 JDM Car Shop. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

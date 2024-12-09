@@ -1,0 +1,172 @@
+@font-face {
+  font-family:Anton SC;
+  src: url(./Font/AntonSC-Regular.ttf);
+}
+
+@font-face {
+  font-family:Streetar;
+  src: url(./Font/StreetartDemoRegular.ttf);
+}
+
+/* Reset */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que o tamanho total do elemento inclua bordas e preenchimento */
+}
+
+/* Body */
+body {
+  font-family: "Roboto", sans-serif; /* Define a fonte como Roboto */
+  background-color: #121212; /* Cor de fundo escura para a página */
+  color: #fff; /* Cor do texto branca */
+  line-height: 1.6; /* Aumenta a altura das linhas para uma melhor legibilidade */
+  animation: fadeIn 1s ease-in-out; /* Animação de fade-in para o corpo da página ao carregá-la */
+}
+
+/* Header */
+header {
+  background: url("../img/LB\ WORKS\ Toyota\ GR\ Supra\ MkV.jpg") center/cover
+    no-repeat; /* Define a imagem de fundo do cabeçalho, centralizada e cobrindo toda a área */
+  height: 60vh; /* Define a altura do cabeçalho para 60% da altura da janela de visualização */
+  display: flex; /* Usa Flexbox para alinhar os itens dentro do cabeçalho */
+  justify-content: center; /* Alinha os itens horizontalmente no centro */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  text-align: center; /* Alinha o texto ao centro */
+  color: white; /* Cor do texto branca */
+  opacity: 0; /* O cabeçalho começa invisível */
+  animation: fadeIn 2s ease-in-out forwards; /* Animação de fade-in com duração de 2 segundos */
+}
+
+/* Conteúdo do Cabeçalho */
+header .header-content h1 {
+  font-family: Streetar;
+  font-size: 80px; /* Tamanho da fonte do título */
+  font-weight: bold; /* Torna o título em negrito */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra no texto para dar destaque */
+  animation: slideUp 1s ease-out; /* Animação de deslizar o título para cima */
+}
+
+header .header-content p {
+  font-size: 1.5rem; /* Tamanho da fonte do parágrafo */
+  margin-top: 10px; /* Espaço acima do parágrafo */
+  font-style: italic; /* Torna o parágrafo em itálico */
+  animation: slideUp 1.5s ease-out; /* Animação de deslizar o parágrafo para cima */
+  animation-delay: 0.5s; /* Atraso de 0.5 segundos para a animação do parágrafo */
+}
+
+/* Sections */
+section {
+  padding: 40px; /* Adiciona preenchimento interno à seção */
+  margin-top: 20px; /* Espaço acima da seção */
+  opacity: 0; /* A seção começa invisível */
+  animation: fadeInUp 1s ease-in-out forwards; /* Animação de fade-in e movimento para cima */
+}
+
+/* Intro Section */
+.intro h2 {
+  font-size: 2.5rem; /* Tamanho da fonte para o título da seção de introdução */
+  margin-bottom: 15px; /* Espaço abaixo do título */
+  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+  color: #ff9000; /* Cor do título em laranja */
+}
+
+.intro p {
+  font-size: 1.2rem; /* Tamanho da fonte do parágrafo */
+}
+
+/* Performance Section */
+.performance ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  font-size: 1.1rem; /* Tamanho da fonte dos itens da lista */
+}
+
+.performance li {
+  margin: 10px 0; /* Espaço entre os itens da lista */
+}
+
+.performance strong {
+  color: #ff9000; /* Cor do texto em negrito (laranja) */
+}
+
+/* Design Section */
+.design h2,
+.legacy h2 {
+  font-size: 2.5rem; /* Tamanho da fonte para os títulos */
+  margin-bottom: 15px; /* Espaço abaixo dos títulos */
+  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+  color: #ff9000; /* Cor laranja para os títulos */
+}
+
+.design p,
+.legacy p {
+  font-size: 1.2rem; /* Tamanho da fonte dos parágrafos */
+  margin-bottom: 15px; /* Espaço abaixo dos parágrafos */
+}
+
+/* Video */
+video {
+  width: 80%; /* Define a largura do vídeo como 80% do seu contêiner */
+  border-radius: 10px; /* Bordas arredondadas para o vídeo */
+  opacity: 0; /* O vídeo começa invisível */
+  animation: fadeIn 2s ease-in-out forwards; /* Animação de fade-in para o vídeo */
+}
+
+/* Button */
+.button-container {
+  text-align: center; /* Centraliza o botão */
+  margin: 30px 0; /* Espaço acima e abaixo do botão */
+}
+
+.back-button {
+    font-family:Anton SC;
+  display: inline-block; /* Torna o botão em linha, mas com propriedades de bloco */
+  padding: 10px 20px; /* Preenchimento interno do botão */
+  background-color: #ff9000; /* Cor de fundo laranja para o botão */
+  color: #fff; /* Cor do texto branca */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-size: 1.2rem; /* Tamanho da fonte do texto no botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave de cor de fundo e transformação */
+}
+
+.back-button:hover {
+  background-color: #e67e00; /* Cor do fundo muda para um tom mais escuro de laranja quando o mouse passa por cima */
+  transform: scale(1.1); /* O botão aumenta de tamanho ao passar o mouse */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    opacity: 1; /* Fica completamente visível */
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(
+      30px
+    ); /* Começa com o elemento deslocado 30px para baixo */
+  }
+  100% {
+    opacity: 1; /* Fica completamente visível */
+    transform: translateY(0); /* Retorna à sua posição original */
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(
+      30px
+    ); /* Começa com o elemento deslocado 30px para baixo */
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    transform: translateY(0); /* Retorna à sua posição original */
+    opacity: 1; /* Fica completamente visível */
+  }
+}

@@ -1,0 +1,136 @@
+@font-face {
+  font-family: Anton SC;
+  src: url(./Font/AntonSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: Streetar;
+  src: url(./Font/StreetartDemoRegular.ttf);
+}
+
+/* Reset */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que o tamanho total de um elemento inclua bordas e preenchimento */
+}
+
+/* Body */
+body {
+  font-family: "Roboto", sans-serif; /* Define a fonte Roboto para o corpo da página */
+  background-color: #121212; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto branca */
+  line-height: 1.6; /* Altura das linhas aumentada para melhorar a legibilidade */
+}
+
+/* Header */
+header {
+  background: url("../img/GT-R.jpg\(1\).jpg") center/cover no-repeat; /* Define a imagem de fundo do cabeçalho, centralizada e cobrindo toda a área */
+  height: 60vh; /* Define a altura do cabeçalho como 60% da altura da tela */
+  display: flex; /* Usando Flexbox para alinhamento dos itens dentro do cabeçalho */
+  justify-content: center; /* Alinha os itens no centro horizontalmente */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  text-align: center; /* Alinha o texto no centro */
+  color: white; /* Cor do texto branca */
+  opacity: 0; /* Cabeçalho começa invisível */
+  animation: fadeIn 2s forwards; /* Animação de fade-in com duração de 2 segundos para tornar o cabeçalho visível */
+}
+
+/* Conteúdo do Cabeçalho */
+header .header-content h1 {
+  font-family: Streetar;
+  font-size: 80px; /* Tamanho do título */
+  font-weight: bold; /* Deixa o título em negrito */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto para dar destaque */
+}
+
+header .header-content p {
+  font-size: 1.5rem; /* Tamanho da fonte do parágrafo */
+  margin-top: 10px; /* Espaço acima do parágrafo */
+  font-style: italic; /* Deixa o parágrafo em itálico */
+}
+
+/* Sections */
+section {
+  padding: 40px; /* Adiciona preenchimento interno às seções */
+  margin-top: 20px; /* Espaço acima das seções */
+  opacity: 0; /* Seções começam invisíveis */
+  animation: fadeIn 2s forwards; /* Animação de fade-in para as seções */
+}
+
+/* Atraso nas animações de fade para diferentes seções */
+section:nth-of-type(1) {
+  animation-delay: 0.5s; /* Atraso de 0.5 segundos para a primeira seção */
+}
+section:nth-of-type(2) {
+  animation-delay: 1s; /* Atraso de 1 segundo para a segunda seção */
+}
+section:nth-of-type(3) {
+  animation-delay: 1.5s; /* Atraso de 1.5 segundos para a terceira seção */
+}
+section:nth-of-type(4) {
+  animation-delay: 2s; /* Atraso de 2 segundos para a quarta seção */
+}
+
+/* Button */
+.button-container {
+  text-align: center; /* Centraliza o botão */
+  margin: 30px 0; /* Espaço acima e abaixo do botão */
+}
+
+.back-button {
+  font-family: Anton SC;
+  display: inline-block; /* Torna o botão um elemento em linha com características de bloco */
+  padding: 10px 20px; /* Preenchimento interno do botão */
+  background-color: #ff0054; /* Cor de fundo do botão (vermelho) */
+  color: #fff; /* Cor do texto do botão (branco) */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-size: 1.2rem; /* Tamanho da fonte do texto no botão */
+  border-radius: 5px; /* Borda arredondada para o botão */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor de fundo e transformação */
+}
+
+.back-button:hover {
+  background-color: #e6004c; /* Cor de fundo muda para um tom mais escuro de vermelho ao passar o mouse */
+  transform: translateY(
+    -5px
+  ); /* Eleva o botão um pouco ao passar o mouse, criando um efeito de "elevação" */
+}
+
+/* Vídeo */
+video {
+  width: 80%; /* Define a largura do vídeo como 80% do contêiner */
+  border-radius: 10px; /* Bordas arredondadas no vídeo */
+  opacity: 0; /* O vídeo começa invisível */
+  animation: fadeIn 2s forwards; /* Animação de fade-in para o vídeo */
+}
+
+/* Animação de Fade-In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    opacity: 1; /* Fica totalmente visível */
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header .header-content h1 {
+    font-size: 60px; /* Reduz o tamanho do título para 2rem em telas pequenas */
+  }
+
+  header .header-content p {
+    font-size: 1.2rem; /* Reduz o tamanho do parágrafo para 1.2rem em telas pequenas */
+  }
+
+  section {
+    padding: 20px; /* Reduz o preenchimento das seções para 20px em telas pequenas */
+  }
+
+  .back-button {
+    font-size: 1rem; /* Reduz o tamanho da fonte do botão */
+    padding: 8px 16px; /* Reduz o preenchimento do botão */
+  }
+}
